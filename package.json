@@ -1,0 +1,12 @@
+{
+  "name": "landing_page",
+  "version": "1.0.0",
+  "description": "Landing page dla firmy TravelCO. Zaplanuj swoje wymarzone wakacje",
+  "license": "ISC",
+  "author": "Dariusz Skrzypczak",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
