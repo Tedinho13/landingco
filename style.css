@@ -41,7 +41,6 @@ body {
 .btn--yellow {
     padding: 1.2rem 2.4rem;
     background-color: var(--secondary-color);
-    color: var(--dark-text-color);
     font-family: 'Quicksand';
     border-radius: 40px;
     border: none;
