@@ -251,3 +251,113 @@ html {
         font-size: 2.4rem;
     }
 }
+
+/* SEARCH BAR */
+
+.search-bar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: -10vh;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    z-index: 4;
+    padding: 1rem;
+    height: clamp(20vh, 20vh, 25vh);
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.search__field, .search__date, .search__people-number {
+    position: relative;
+}
+
+.search__field {
+    display: flex;
+    align-items: center;
+}
+
+.search__location-icon {
+    display: inline-block;
+    color: var(--primary-color);
+}
+
+.input {
+    padding: 0.8rem 1.4rem 0.8rem 3.5rem; /* lewy padding = miejsce na ikonę */
+    background-color: #F0F4FA;
+    font-family: inherit;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 20px;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.2rem;
+    width: 20px;
+    height: 20px;
+    color: var(--primary-color);
+}
+
+.search__input {
+    width: 100%;
+}
+
+.search__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+}
+
+.search__icon--white {
+    color: var(--white-color);
+}
+
+.search__date, .search__people-number {
+    display: none;
+}
+
+@media(orientation: landscape) {
+    .search-bar {
+        margin-right: 4rem;
+        margin-left: 4rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .search-bar {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: -5vh;
+        height: clamp(10vh, 10vh, 15vh);
+    }
+
+    .search__date, .search__people-number {
+        display: inline-block;
+    }
+
+    .search__field {
+        width: 50%;
+    }
+
+    .search__btn {
+        width: 15%;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    }
+
+}
