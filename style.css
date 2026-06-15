@@ -11,6 +11,7 @@
     --secondary-color: #FACC15;
     --tertiary-color: #DE8712;
     --neutral-text-color: #73787D;
+    --dark-text-color: #2C3135;
     --white-color: #F6FAFF;
 }
 
@@ -19,8 +20,35 @@ html {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+/* KOMPONENTY */
+
+.btn--blue {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn--yellow {
+    padding: 1.2rem 2.4rem;
+    background-color: var(--secondary-color);
+    color: var(--dark-text-color);
+    font-weight: 300;
+    border-radius: 40px;
+    border: none;
+    color: var(--neutral-text-color);
+}
+
+.heading__primary {
+    font-size: 2.2rem;
+    color: var(--white-color);
+}
+
+/* NAWIGACJA GŁÓWNA */
+
 .main__menu-mobile {
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,8 +94,8 @@ html {
     display: flex;
     align-items: center;
     color: var(--primary-color);
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2rem;
+    height: 2rem;
     transition: fill 0.2s;
     cursor: pointer;
 }
@@ -98,6 +126,11 @@ html {
     }
 
     .main__menu-desktop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -145,7 +178,6 @@ html {
     }
 
     .btn {
-        padding: 0.5rem 1rem;
         font-size: 1.2rem;
         border: none;
         cursor: pointer;
@@ -153,16 +185,15 @@ html {
     }
 
     .btn-sign {
+        padding: 0.5rem 1rem;
         background-color: transparent;
         color: var(--primary-color);
     }
 
     .btn-join {
-        background-color: var(--primary-color);
-        color: var(--white-color);
+        padding: 0.5rem 1rem;
         font-weight: bold;
         border-radius: 40px;
-        
     }
 
     .btn-sign:hover {
@@ -171,5 +202,52 @@ html {
 
     .btn-join:hover {
         background-color: var(--tertiary-color);
+    }
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8vh;
+    height: 92vh;
+    background-image: url("img/moremilu-mission-beach-1280.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.3);
+}
+
+.hero__content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 80%;
+    text-align: center;
+}
+
+@media(min-width: 1024px) {
+    .hero {
+        margin-top: 0;
+        height: 100vh;
+    }
+
+    .hero__content {
+        gap: 4rem;
+    }
+
+    .heading__primary {
+        font-size: 2.4rem;
     }
 }
