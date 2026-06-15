@@ -14,6 +14,7 @@
     --dark-text-color: #2C3135;
     --white-color: #F6FAFF;
     --background-color-light: #E5EFF4;
+    --background-color-light-2: #E9F2F9;
 }
 
 html {
@@ -400,7 +401,7 @@ body {
 /* CARDS */
 
 .locations {
-    margin: 3rem 2rem;
+    margin: 4rem 2rem;
 }
 
 .locations__heading {
@@ -511,5 +512,96 @@ body {
 
     .card:hover .card__image {
         transform: scale(1.05);
+    }
+}
+
+/* RECCOMENDATION */
+
+.recommendation {
+    margin: 4rem 2rem;
+    background-color: var(--background-color-light-2);
+    padding: 1.5rem;
+}
+
+.profile__photo {
+    display: none;
+}
+
+.quotemark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 5rem;
+    font-family: 'Quicksand';
+    color: var(--tertiary-color);
+}
+
+.story {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 2rem;
+}
+
+.quote {
+    padding-top: 4rem;
+    font-family: 'Quicksand', sans-serif;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+.author-credentials {
+    margin-top: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-initials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+
+.author-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media(min-width: 1024px) {
+
+    .recommendation {
+        margin: 4rem 0;
+        padding: 2rem;
+    }
+
+    .recommendation__content {
+        display: grid;
+        grid-template-columns: 30vw 1fr;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .image-box {
+        display: flex;
+        justify-content: center;
+        height: 30vh;
+    }
+
+    .story {
+        margin-top: 0;
+    }
+
+    .profile__photo {
+        display: block;
+        height: 100%;
+        /* width: 100%; */
+        /* object-fit: cover; */
+        border-radius: 50%;
     }
 }
